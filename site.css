@@ -85,7 +85,7 @@ li {
 
 .main {
   display: grid;
-  gap: 10px;
+  gap: 40px;
   grid-template-columns: 2fr 1fr;
   line-height: 1.5;
   margin: 30px 70px 10px 100px;
@@ -99,8 +99,13 @@ li {
   font-size: 0.8rem;
 }
 
-#sidebar img {
-  height: 200px;
+.bx-wrapper {
+  margin-left: 40px;
+  width: 80%;
+}
+
+.bx-wrapper img {
+  width: 200px;
 }
 
 .bx-pager-item {
@@ -122,8 +127,33 @@ li {
 
 .footer {
   background-color: #3D4545;
+  color: white;
   display: flex;
+  font-size: 0.5em;
   justify-content: space-between;
+  padding: 20px 50px 30px 100px;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social {
+  background-color: #adb2b3;
+  background-image: url("./assets/social-icons.png");
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  margin-left: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+#twitter {
+  background-position: left 5px bottom 1px;
+}
+
+#linkedin {
+  background-position: right 5px bottom 1px;
 }
 
 

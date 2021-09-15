@@ -22,6 +22,8 @@ const formatNameForLink = (name) => {
 $(document).ready(function(){
   $('.bxslider').bxSlider({
     controls: false,
+    responsive: true,
+    slideWidth: 250,
     buildPager: function(index) {
       img = $('#staff-rotator img').eq(index);
       const src = img.attr('src');

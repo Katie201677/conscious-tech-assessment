@@ -22,7 +22,7 @@ header {
 /* fix nav bar to top of screen */
 nav {
   background: white;
-  border-bottom: 1px solid #d1dadb;
+  border-bottom: 1px solid rgb(239, 239, 239);
   position: fixed;
   top: 0;
   width: 100vw;
@@ -35,8 +35,11 @@ nav {
   margin-left: 100px;
 }
 
-.sub-nav {
-  display: none;
+@media only screen and (max-width: 480px) {
+  .nav {
+    justify-content: center;
+    margin-left: 10px;;
+  }
 }
 
 li {
@@ -48,7 +51,7 @@ li {
 }
 
 .link a {
-  color: #4B5457;
+  color: rgb(107, 107, 107);
   font-size: 0.8rem;
   text-decoration: none;
 }
@@ -58,7 +61,26 @@ li {
 }
 
 .link-main:hover {
-  border-bottom: 1px solid #EF4D16;
+  border-bottom: 1px solid rgb(213, 92, 39);
+}
+
+/* display subnav on hover: */
+.sub-nav {
+  display: none;
+}
+
+.link-main:hover .sub-nav {
+  display: block;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0
+  }
+  100% {
+      opacity: 1
+  }
 }
 
 .section-marker {
@@ -68,7 +90,7 @@ li {
 }
 
 .about-marker {
-  background-color: #EF4D16;
+  background-color: rgb(213, 92, 39);
   border-radius: 50%;
   color: white;
   display: flex;
@@ -84,11 +106,18 @@ li {
 }
 
 .main {
+  color: rgb(35, 35, 35);
   display: grid;
   gap: 40px;
   grid-template-columns: 2fr 1fr;
   line-height: 1.5;
   margin: 30px 70px 10px 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
 }
 
 .main p {
@@ -99,39 +128,38 @@ li {
   font-size: 0.8rem;
 }
 
-.bx-wrapper {
-  margin-left: 40px;
-  width: 80%;
-}
-
-.bx-wrapper img {
-  width: 200px;
-}
-
 .bx-pager-item {
-  background-color: #adb2b3;
+  background-color: rgb(224, 222, 222);
   margin-bottom: 10px;
   padding: 10px;
 }
 
+.bx-pager-item:hover {
+  background-color: rgb(213, 92, 39);
+}
+
 .bx-pager-item:active {
-  background-color: #EF4D16;
+  background-color: rgb(213, 92, 39);
 }
 
 .name {
-  color: #4B5457;
+  color: rgb(35, 35, 35);
   font-size: 0.9rem;
   text-decoration: none;
   text-transform: capitalize;
 }
 
 .footer {
-  background-color: #3D4545;
+  background-color: rgb(92, 92, 92);
   color: white;
-  display: flex;
   font-size: 0.5em;
+}
+
+.footer-container {
+  display: flex;
   justify-content: space-between;
-  padding: 20px 50px 30px 100px;
+  padding: 20px 15px 30px 100px;
+  margin-right: 70px;
 }
 
 .social-icons {
@@ -144,16 +172,31 @@ li {
   background-repeat: no-repeat;
   border-radius: 50px;
   margin-left: 10px;
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
 }
 
 #twitter {
-  background-position: left 5px bottom 1px;
+  background-position: left 6px center;
+}
+
+#facebook {
+  background-position: center;
 }
 
 #linkedin {
-  background-position: right 5px bottom 1px;
+  background-position: right 6px center;
 }
 
+@media only screen and (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
 

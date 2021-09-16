@@ -1,9 +1,13 @@
+// move bxslider content to right column. 
+
 const footer = document.querySelector("#footer");
 const rotator = document.querySelector("#staff-rotator");
 const sidebar = document.querySelector("#sidebar");
 
 footer.removeChild(rotator);
 sidebar.appendChild(rotator);
+
+// helper functions for bxslider callback:
 
 const extractName = (inputString) => {
   const regex = /(?<=people\/).*(?=\.jpg)/g;
@@ -18,6 +22,8 @@ const formatName = (name) => {
 const formatNameForLink = (name) => {
   return name.replace("_", "-");
 }
+
+//bxslider:
 
 $(document).ready(function(){
   $('.bxslider').bxSlider({

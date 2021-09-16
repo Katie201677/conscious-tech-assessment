@@ -114,7 +114,7 @@ li {
   margin: 30px 70px 10px 100px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .main {
     grid-template-columns: 1fr;
   }
@@ -153,13 +153,14 @@ li {
   background-color: rgb(92, 92, 92);
   color: white;
   font-size: 0.5em;
+  margin-right: 70px;
+  width: 100%;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px 15px 30px 100px;
-  margin-right: 70px;
+  padding: 20px 100px 30px 100px;
 }
 
 .social-icons {
@@ -191,7 +192,8 @@ li {
 @media only screen and (max-width: 480px) {
   .footer-container {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    text-align: center;
   }
 
   .social-icons {
